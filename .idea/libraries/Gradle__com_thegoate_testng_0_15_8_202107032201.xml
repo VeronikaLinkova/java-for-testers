@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.thegoate:testng:0.15.8.202107032201">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thegoate/testng/0.15.8.202107032201/83f5743a77529c09de9af9a70d37ebf0e9b7a0bc/testng-0.15.8.202107032201.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thegoate/testng/0.15.8.202107032201/fa8711a9cbaa4ac20a6a2b734e3a743b804a454b/testng-0.15.8.202107032201-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
