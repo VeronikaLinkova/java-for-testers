@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-12T23:41:57" hostname="DESKTOP-9PR791T" time="5.547">
+<testsuite name="ru.stqa.ptf.addressbook.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-12T23:58:07" hostname="DESKTOP-9PR791T" time="4.582">
   <properties/>
-  <testcase name="testContactCreationTests" classname="ru.stqa.ptf.addressbook.ContactCreationTests" time="5.547"/>
+  <testcase name="testContactCreation" classname="ru.stqa.ptf.addressbook.ContactCreationTests" time="4.582"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1626133312300	geckodriver	INFO	Listening on 127.0.0.1:31618
-1626133312844	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "0" "-foreground" "-no-remote" "-profile" "C:\\Users\\vakri\\AppData\\Local\\Temp\\rust_mozprofile6t4MOD"
-1626133313911	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vakri\\AppData\\Local\\Temp\\rust_mozprofile6t4MOD\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:55748/devtools/browser/ef797139-3943-43fc-ab83-5d503e6b14dc
-1626133317066	Marionette	INFO	Listening on port 64128
-1626133317183	Marionette	WARN	TLS certificate errors will be ignored for this session
-июл. 13, 2021 2:41:57 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+1626134280584	geckodriver	INFO	Listening on 127.0.0.1:8380
+1626134280961	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "0" "-foreground" "-no-remote" "-profile" "C:\\Users\\vakri\\AppData\\Local\\Temp\\rust_mozprofileeqoniS"
+1626134282096	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vakri\\AppData\\Local\\Temp\\rust_mozprofileeqoniS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61955/devtools/browser/c23a29b0-9249-415e-8cfd-0c4687ad94b2
+1626134285871	Marionette	INFO	Listening on port 55273
+1626134286329	Marionette	WARN	TLS certificate errors will be ignored for this session
+июл. 13, 2021 2:58:06 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
