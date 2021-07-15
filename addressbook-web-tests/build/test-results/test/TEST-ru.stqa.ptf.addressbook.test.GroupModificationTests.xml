@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.ptf.addressbook.test.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-15T12:05:10" hostname="DESKTOP-9PR791T" time="1.995">
+  <properties/>
+  <testcase name="testGroupModification" classname="ru.stqa.ptf.addressbook.test.GroupModificationTests" time="1.995"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1626350704225	geckodriver	INFO	Listening on 127.0.0.1:19839
+1626350704615	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "0" "-foreground" "-no-remote" "-profile" "C:\\Users\\vakri\\AppData\\Local\\Temp\\rust_mozprofiletX8CRp"
+1626350705328	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vakri\\AppData\\Local\\Temp\\rust_mozprofiletX8CRp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:58208/devtools/browser/bd6f332e-4f5c-4fdb-8793-2c7bd89ecf8e
+1626350708766	Marionette	INFO	Listening on port 61598
+1626350708827	Marionette	WARN	TLS certificate errors will be ignored for this session
+июл. 15, 2021 3:05:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1626350712476	Marionette	INFO	Stopped listening on port 61598
+!!! error running onStopped callback: TypeError: callback is not a function
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1626350713190	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIWindowMediator.getEnumerator]"  nsresult: "0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame :: chrome://remote/content/cdp/observers/TargetObserver.jsm :: stop :: line 64"  data: no] Stack trace: stop()@TargetObserver.jsm:64
+unwatchForTabs()@TargetList.jsm:70
+unwatchForTargets()@TargetList.jsm:37
+destructor()@TargetList.jsm:109
+close()@RemoteAgent.jsm:136
+]]></system-err>
+</testsuite>
