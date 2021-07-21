@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.test.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-21T20:46:58" hostname="DESKTOP-9PR791T" time="5.049">
+<testsuite name="ru.stqa.ptf.addressbook.test.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-21T22:41:43" hostname="DESKTOP-9PR791T" time="5.508">
   <properties/>
-  <testcase name="testContactCreation" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="5.049"/>
+  <testcase name="testGroupModification" classname="ru.stqa.ptf.addressbook.test.GroupModificationTests" time="5.508"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 92.0.4515.43 (8c61b7e2989f2990d42f859cac71319137787cce-refs/branch-heads/4515@{#306}) on port 37866
+Starting ChromeDriver 92.0.4515.43 (8c61b7e2989f2990d42f859cac71319137787cce-refs/branch-heads/4515@{#306}) on port 33298
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-июл. 21, 2021 11:46:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+июл. 22, 2021 1:41:42 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-июл. 21, 2021 11:46:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+июл. 22, 2021 1:41:42 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 92, so returning the closest version found: 91
-июл. 21, 2021 11:46:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+июл. 22, 2021 1:41:42 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 92 of 91
 ]]></system-err>
 </testsuite>
