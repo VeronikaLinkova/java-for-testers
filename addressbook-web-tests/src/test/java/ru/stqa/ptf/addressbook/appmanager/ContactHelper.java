@@ -17,6 +17,7 @@ public class ContactHelper extends HelperBase{
     }
     public void submitContactDeletion(){
         wd.switchTo().alert().accept();
+        wd.findElement(By.cssSelector("div.msgbox"));
     }
     public void selectContact() {
         click(By.name("selected[]"));
@@ -36,7 +37,7 @@ public class ContactHelper extends HelperBase{
         type(By.name("lastname"),contactData.getLastname());
         type(By.name("nickname"),contactData.getNikcname());
         if (creation){
-            new Select(wd.findElement(By.name("new_group"))).selectByIndex(3);
+            new Select(wd.findElement(By.name("new_group"))).selectByIndex(1);
         }
         else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));

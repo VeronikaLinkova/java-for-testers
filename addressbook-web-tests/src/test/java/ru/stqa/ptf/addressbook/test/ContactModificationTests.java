@@ -7,9 +7,8 @@ import ru.stqa.ptf.addressbook.model.GroupData;
 public class ContactModificationTests extends TestBase{
     @Test
     public void testContactModification(){
-        app.getContactHelper().selectContact();
         app.getContactHelper().initContactModification();
-        app.getContactHelper().fillContactForm(new ContactData("Veronika1990","Alexandrovna","Krilova","Nika",null),false);
+        app.getContactHelper().fillContactForm(new ContactData("Veronika02/03/1990","Alexandrovna","Krilova","Nika",null),false);
         app.getContactHelper().submitContactModification();
         app.getNavigationHelper().goToHomePage();
     }
