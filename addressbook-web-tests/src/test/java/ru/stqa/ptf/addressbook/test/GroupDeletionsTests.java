@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.ptf.addressbook.model.GroupData;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class GroupDeletionsTests extends TestBase {
@@ -29,6 +30,7 @@ public class GroupDeletionsTests extends TestBase {
 
     before.remove(before.size()-1);
     Assert.assertEquals(before,after);
+
   }
 }
 

@@ -3,11 +3,23 @@ package ru.stqa.ptf.addressbook.model;
 import java.util.Objects;
 
 public class GroupData {
+    private String id;
     private final String name;
     private final String header;
     private final String footer;
 
+    public String getId() {
+        return id;
+    }
+
+    public GroupData(String id, String name, String header, String footer) {
+        this.id = id;
+        this.name = name;
+        this.header = header;
+        this.footer = footer;
+    }
     public GroupData(String name, String header, String footer) {
+        this.id = null;
         this.name = name;
         this.header = header;
         this.footer = footer;
@@ -36,7 +48,8 @@ public class GroupData {
     @Override
     public String toString() {
         return "GroupData{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 
