@@ -1,7 +1,10 @@
 package ru.stqa.ptf.addressbook.test;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.ptf.addressbook.model.GroupData;
+
+import java.util.List;
 
 public class GroupModificationTests extends TestBase{
     @Test
@@ -10,11 +13,17 @@ public class GroupModificationTests extends TestBase{
         if (!app.getGroupHelper().isThereAGroup()){
             app.getGroupHelper().createGroup(new GroupData("test1", null, null));
         }
+        //int before = app.getGroupHelper().getGroupsCount();
+        List<GroupData> before = app.getGroupHelper().getGroupList();
         app.getNavigationHelper().goToGroupsPage();
-        app.getGroupHelper().selectGroup();
+        app.getGroupHelper().selectGroup(before.size()-1);
         app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupForm(new GroupData("test4", "tets2", "test6"));
         app.getGroupHelper().submitGroupModification();
         app.getNavigationHelper().goToGroupsPage();
+        //int after = app.getGroupHelper().getGroupsCount();
+        List<GroupData> after = app.getGroupHelper().getGroupList();
+        //Assert.assertEquals(after,before);
+        Assert.assertEquals(after.size(),before.size());
     }
 }
