@@ -9,7 +9,7 @@ public class NavigationHelper extends HelperBase{
         super(wd);
     } //явно вызывем конструктр базового класса
 
-    public void goToGroupsPage() {
+    public void GroupsPage() {
 
         if (isElementPresent(By.tagName("h1")) && wd.findElement(By.tagName("h1")).equals("Groups") &&
         isElementPresent(By.name("new"))){

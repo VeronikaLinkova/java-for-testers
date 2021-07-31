@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.test.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-30T17:03:47" hostname="DESKTOP-9PR791T" time="7.995">
+<testsuite name="ru.stqa.ptf.addressbook.test.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-31T16:07:58" hostname="DESKTOP-9PR791T" time="1.44">
   <properties/>
-  <testcase name="testGroupModification" classname="ru.stqa.ptf.addressbook.test.GroupModificationTests" time="7.995"/>
+  <testcase name="testGroupModification" classname="ru.stqa.ptf.addressbook.test.GroupModificationTests" time="1.44"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 92.0.4515.43 (8c61b7e2989f2990d42f859cac71319137787cce-refs/branch-heads/4515@{#306}) on port 16880
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-июл. 30, 2021 8:03:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-июл. 30, 2021 8:03:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 92, so returning the closest version found: 91
-июл. 30, 2021 8:03:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Found CDP implementation for version 92 of 91
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

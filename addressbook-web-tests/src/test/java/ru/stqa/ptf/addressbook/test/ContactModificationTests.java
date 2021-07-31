@@ -11,20 +11,20 @@ import java.util.HashSet;
 import java.util.List;
 
 public class ContactModificationTests extends TestBase{
-    @Test
+    @Test(enabled = false)
     public void testContactModification(){
 
         if (!app.getContactHelper().isThereAContact()){
-            app.getNavigationHelper().goToAddNewContactPage();
+            app.goTo().goToAddNewContactPage();
             app.getContactHelper().createContact(new ContactData("Veronika1990", "Alexandrovna","Linkova","Nika", null));
-            app.getNavigationHelper().goToHomePage();
+            app.goTo().goToHomePage();
         }
         List<ContactData> before = app.getContactHelper().getContactList();
         app.getContactHelper().initContactModification(before.size()-1);
         ContactData contact = new ContactData(before.get(before.size()-1).getId(),"Test2","Alexandrovna","Krilova","Nika",null);
         app.getContactHelper().fillContactForm(new ContactData("Test2","Alexandrovna","Krilova","Nika",null),false);
         app.getContactHelper().submitContactModification();
-        app.getNavigationHelper().goToHomePage();
+        app.goTo().goToHomePage();
         List<ContactData> after = app.getContactHelper().getContactList();
 
         Assert.assertEquals(before.size(),after.size());
