@@ -8,6 +8,7 @@ dependencies {
     implementation 'com.thegoate:testng:0.15.8.202107032201'
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0-beta-4'
     implementation 'junit:junit:4.13.1'
+    implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
 }
 
 test {

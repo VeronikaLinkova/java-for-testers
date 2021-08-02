@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.test.GroupDeletionsTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-31T16:07:57" hostname="DESKTOP-9PR791T" time="0.771">
+<testsuite name="ru.stqa.ptf.addressbook.test.GroupDeletionsTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-01T00:59:10" hostname="DESKTOP-9PR791T" time="3.723">
   <properties/>
-  <testcase name="testGroupDeletions" classname="ru.stqa.ptf.addressbook.test.GroupDeletionsTests" time="0.771"/>
+  <testcase name="testGroupDeletions" classname="ru.stqa.ptf.addressbook.test.GroupDeletionsTests" time="3.723"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
