@@ -50,17 +50,11 @@ public class ContactHelper extends HelperBase{
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
     }
-
-    public void createContact(ContactData contact) {
-        fillContactForm(new ContactData("Veronika1990", "Alexandrovna","Linkova","Nika", null), true);
-        confirmNewContact();
-    }
-
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public List<ContactData> getContactList() {
+    public List<ContactData> list() {
         List<WebElement> elements = wd.findElements(By.name("entry"));
         //List<WebElement> elements = wd.findElements(By.name("selected[]"));
         List <ContactData> contacts = new ArrayList<>();
@@ -72,5 +66,20 @@ public class ContactHelper extends HelperBase{
             contacts.add(contact);
         }
         return contacts;
+    }
+
+    public void create(ContactData contact) {
+        fillContactForm(contact, true);
+        confirmNewContact();
+    }
+    public void modify(int index, ContactData contact) {
+        initContactModification(index);
+        fillContactForm(contact,false);
+        submitContactModification();
+    }
+    public void delete(int index) {
+        selectContact(index);
+        deleteSelectedContact();
+        submitContactDeletion();
     }
 }
