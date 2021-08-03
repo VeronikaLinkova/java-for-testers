@@ -42,7 +42,7 @@ public class GroupModificationTests extends TestBase{
         //Set<GroupData> after = app.group().all();
         //List<GroupData> after = app.group().list();
         //Assert.assertEquals(after,before);
-        Assert.assertEquals(after.size(),before.size());
+        //Assert.assertEquals(after.size(),before.size());
         //before.remove(modifiedGroup);
         //before.add(group);
         //Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
@@ -51,6 +51,6 @@ public class GroupModificationTests extends TestBase{
         //after.sort(byId);
         //Assert.assertEquals(before, after);
         MatcherAssert.assertThat
-                (before, CoreMatchers.equalTo(after.without(modifiedGroup).withAdded(group)));
+                (before.without(modifiedGroup).withAdded(group), CoreMatchers.equalTo(after));
     }
 }
