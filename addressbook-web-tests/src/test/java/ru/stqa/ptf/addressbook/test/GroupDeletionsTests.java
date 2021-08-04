@@ -37,11 +37,11 @@ public class GroupDeletionsTests extends TestBase {
     app.goTo().GroupsPage();
 
     //int after = app.getGroupHelper().getGroupsCount();
+    Assert.assertEquals(app.group().count(),before.size() - 1);
     Groups after = app.group().all();
     //Set<GroupData> after = app.group().all();
     //List<GroupData> after = app.group().list();
     //Assert.assertEquals(after,before - 1);
-    Assert.assertEquals(after.size(),before.size() - 1);
 
     //before.remove(deletedGroup);
     //Assert.assertEquals(before,after);

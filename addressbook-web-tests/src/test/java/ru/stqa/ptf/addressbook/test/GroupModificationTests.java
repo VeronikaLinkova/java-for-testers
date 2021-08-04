@@ -38,11 +38,11 @@ public class GroupModificationTests extends TestBase{
 
         app.goTo().GroupsPage();
         //int after = app.getGroupHelper().getGroupsCount();
+        Assert.assertEquals(app.group().count(),before.size());
         Groups after = app.group().all();
         //Set<GroupData> after = app.group().all();
         //List<GroupData> after = app.group().list();
         //Assert.assertEquals(after,before);
-        //Assert.assertEquals(after.size(),before.size());
         //before.remove(modifiedGroup);
         //before.add(group);
         //Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
