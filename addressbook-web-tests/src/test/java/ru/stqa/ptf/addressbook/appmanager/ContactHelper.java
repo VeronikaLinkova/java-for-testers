@@ -78,39 +78,49 @@ public class ContactHelper extends HelperBase{
         return contacts;
     }
 
+    private Contacts contactCache = null;
     public Contacts all() {
-        List<WebElement> elements = wd.findElements(By.name("entry"));
-        //List<WebElement> elements = wd.findElements(By.name("selected[]"));
-        Contacts contacts = new Contacts();
-        //List <ContactData> contacts = new ArrayList<>();
-        for (WebElement element: elements){
-            String firstName = element.findElement(By.xpath("td[3]")).getText();
-            String lastName= element.findElement(By.xpath("td[2]")).getText();
-            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData().withId(id).withFirstname(firstName).withLastname(lastName);
-            contacts.add(contact);
+        if (contactCache!=null){
+            return new Contacts(contactCache);
         }
-        return contacts;
+        else {
+            List<WebElement> elements = wd.findElements(By.name("entry"));
+            //List<WebElement> elements = wd.findElements(By.name("selected[]"));
+            contactCache = new Contacts();
+            //List <ContactData> contacts = new ArrayList<>();
+            for (WebElement element: elements){
+                String firstName = element.findElement(By.xpath("td[3]")).getText();
+                String lastName= element.findElement(By.xpath("td[2]")).getText();
+                int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+                ContactData contact = new ContactData().withId(id).withFirstname(firstName).withLastname(lastName);
+                contactCache.add(contact);
+            }
+            return new Contacts(contactCache);
+        }
     }
 
     public void create(ContactData contact) {
         fillContactForm(contact, true);
         confirmNewContact();
+        contactCache = null;
     }
     public void modify(ContactData contact) {
         initContactModificationById(contact.getId());
         fillContactForm(contact,false);
         submitContactModification();
+        contactCache = null;
     }
 
     public void delete(int index) {
         selectContact(index);
         deleteSelectedContact();
         submitContactDeletion();
+        contactCache = null;
     }
     public void delete(ContactData contact) {
         selectContactById(contact.getId());
         deleteSelectedContact();
         submitContactDeletion();
+        contactCache = null;
     }
 }
