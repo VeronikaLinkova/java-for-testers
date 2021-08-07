@@ -18,7 +18,8 @@ public class ContactPhoneTests extends TestBase{
         if (app.contact().list().size()==0){
             app.goTo().goToAddNewContactPage();
             app.contact().create(new ContactData().withFirstname("Veronika1990").withMiddlename("Alexandrovna").
-                    withLastname("Linkova").withNikcname("Nika"));
+                    withLastname("Linkova").withNikcname("Nika")
+                    .withHomePhone("90201111").withMobilePhone("945-99-50-20").withWorkPhone("(90)"));
             app.goTo().homePage();
         }
     }
