@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.test.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-16T18:50:23" hostname="DESKTOP-9PR791T" time="14.731">
+<testsuite name="ru.stqa.ptf.addressbook.test.ContactCreationTests" tests="15" skipped="0" failures="0" errors="0" timestamp="2021-08-16T22:48:15" hostname="DESKTOP-9PR791T" time="213.603">
   <properties/>
-  <testcase name="testContactCreation" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="14.731"/>
+  <testcase name="testContactCreation[0](ru.stqa.ptf.addressbook.model.ContactData@4afe78be)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="13.526"/>
+  <testcase name="testContactCreation[1](ru.stqa.ptf.addressbook.model.ContactData@4afe7c9e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="10.56"/>
+  <testcase name="testContactCreation[2](ru.stqa.ptf.addressbook.model.ContactData@4afe807e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="11.667"/>
+  <testcase name="testContactCreation[3](ru.stqa.ptf.addressbook.model.ContactData@4afe845e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="11.12"/>
+  <testcase name="testContactCreation[4](ru.stqa.ptf.addressbook.model.ContactData@4afe883e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="12.201"/>
+  <testcase name="testContactCreation[5](ru.stqa.ptf.addressbook.model.ContactData@4afe8c1e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="14.167"/>
+  <testcase name="testContactCreation[6](ru.stqa.ptf.addressbook.model.ContactData@4afe8ffe)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="13.423"/>
+  <testcase name="testContactCreation[7](ru.stqa.ptf.addressbook.model.ContactData@4afe93de)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="14.064"/>
+  <testcase name="testContactCreation[8](ru.stqa.ptf.addressbook.model.ContactData@4afe97be)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="15.516"/>
+  <testcase name="testContactCreation[9](ru.stqa.ptf.addressbook.model.ContactData@4afe9b9e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="15.789"/>
+  <testcase name="testContactCreation[10](ru.stqa.ptf.addressbook.model.ContactData@14c42e1e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="15.611"/>
+  <testcase name="testContactCreation[11](ru.stqa.ptf.addressbook.model.ContactData@14c431fe)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="15.351"/>
+  <testcase name="testContactCreation[12](ru.stqa.ptf.addressbook.model.ContactData@14c435de)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="16.507"/>
+  <testcase name="testContactCreation[13](ru.stqa.ptf.addressbook.model.ContactData@14c439be)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="16.366"/>
+  <testcase name="testContactCreation[14](ru.stqa.ptf.addressbook.model.ContactData@14c43d9e)" classname="ru.stqa.ptf.addressbook.test.ContactCreationTests" time="17.724"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

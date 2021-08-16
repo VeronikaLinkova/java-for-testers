@@ -4,6 +4,9 @@ import org.testng.annotations.*;
 import ru.stqa.ptf.addressbook.model.GroupData;
 import ru.stqa.ptf.addressbook.model.Groups;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -11,15 +14,27 @@ import static org.hamcrest.MatcherAssert.*;
 
 public class GroupCreationTests extends TestBase {
 
-  @Test(enabled = false)
-  public void testGroupCreation() throws Exception {
+  @DataProvider
+  public Iterator<Object[]> validGroups() throws IOException {
+    List<Object[]> list = new ArrayList<Object[]>();
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.csv")));
+    String line = reader.readLine();
+    while (line!=null){
+      String[] split = line.split(";");
+      list.add(new Object[]{new GroupData().withName(split[0]).withFooter(split[1]).withHeader(split[2])});
+      line = reader.readLine();
+    }
+    return list.iterator();
+  }
+  @Test(dataProvider = "validGroups")
+  public void testGroupCreation(GroupData group) throws Exception {
 
     app.goTo().GroupsPage();
     //Set<GroupData> before = app.group().all();
     Groups before = app.group().all();
 
     List<GroupData> beforeList = app.group().list();
-    GroupData group = new GroupData().withName("test1");
+    //GroupData group = new GroupData().withName("test1");
     //int before = app.getGroupHelper().getGroupsCount();
 
     app.group().create(group);
