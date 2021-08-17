@@ -17,6 +17,12 @@ dependencies {
 task testGroups(type: Test) {
     useTestNG()
     options.suites("src/test/resources/testng-groups.xml")
+    if (project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
+    if (project.hasProperty('target')){
+        systemProperty 'target', "${target}"
+    }
 }
 
 task testContacts(type: Test) {
