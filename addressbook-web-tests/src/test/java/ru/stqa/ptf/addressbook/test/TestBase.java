@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import ru.stqa.ptf.addressbook.appmanager.ApplicationManager;
 
+import java.lang.reflect.Method;
+
 public class TestBase {
 
     protected static final ApplicationManager app = new ApplicationManager(
@@ -20,5 +22,13 @@ public class TestBase {
     @AfterSuite
     public void tearDown() throws Exception {
         app.stop();
+    }
+    @BeforeMethod(alwaysRun = true)
+    public void logTestStart(Method m){
+
+    }
+    @AfterMethod(alwaysRun = true)
+    public void logTestStop(Method m){
+
     }
 }
