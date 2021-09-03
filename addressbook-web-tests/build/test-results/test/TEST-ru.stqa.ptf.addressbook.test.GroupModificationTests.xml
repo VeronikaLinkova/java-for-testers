@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.ptf.addressbook.test.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-03T14:54:24" hostname="DESKTOP-9PR791T" time="0.985">
+  <properties/>
+  <testcase name="testGroupModification" classname="ru.stqa.ptf.addressbook.test.GroupModificationTests" time="0.985"/>
+  <system-out><![CDATA[Hibernate: select g1_0.group_id, g1_0.group_footer, g1_0.group_header, g1_0.group_name from group_list as g1_0
+Hibernate: select g1_0.group_id, g1_0.group_footer, g1_0.group_header, g1_0.group_name from group_list as g1_0
+Hibernate: select g1_0.group_id, g1_0.group_footer, g1_0.group_header, g1_0.group_name from group_list as g1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

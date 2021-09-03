@@ -8,25 +8,26 @@ import org.testng.annotations.Test;
 import ru.stqa.ptf.addressbook.model.GroupData;
 import ru.stqa.ptf.addressbook.model.Groups;
 
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 public class GroupModificationTests extends TestBase{
     @BeforeMethod
     public void ensurePreconditions(){
         app.goTo().GroupsPage();
-        if (app.group().all().size()==0){
-            app.group().create(new GroupData().withName("test1"));
+        if(app.db().groups().size()==0){
+            app.group().create(new GroupData().withName("test666"));
         }
+        /*
+        if (app.group().all().size()==0){
+            app.group().create(new GroupData().withName("test666"));
+        }
+         */
     }
     @Test
     public void testGroupModification(){
 
         //int before = app.getGroupHelper().getGroupsCount();
         app.goTo().GroupsPage();
-        Groups before = app.group().all();
+        //Groups before = app.group().all();
+        Groups before = app.db().groups();
         //Set<GroupData> before = app.group().all();
         //List<GroupData> before = app.group().list();
         GroupData modifiedGroup = before.iterator().next();
@@ -35,11 +36,11 @@ public class GroupModificationTests extends TestBase{
                 withId(modifiedGroup.getId()).withName("test4").withHeader("tests2").withFooter("test6");
 
         app.group().modify(group);
-
         app.goTo().GroupsPage();
         //int after = app.getGroupHelper().getGroupsCount();
         Assert.assertEquals(app.group().count(),before.size());
-        Groups after = app.group().all();
+        //Groups after = app.group().all();
+        Groups after = app.db().groups();
         //Set<GroupData> after = app.group().all();
         //List<GroupData> after = app.group().list();
         //Assert.assertEquals(after,before);
