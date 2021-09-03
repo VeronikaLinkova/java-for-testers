@@ -1,12 +1,16 @@
 <list>
   <contact>
-    <firstname>test 0</firstname>
+    <firstname>test 666</firstname>
     <middlename>testMiddleName 0</middlename>
     <lastname>testLastName 0</lastname>
+    <nikcname>222</nikcname>
+    <homePhone>testPhone</homePhone>
   </contact>
   <contact>
-    <firstname>test 1</firstname>
+    <firstname>test 999</firstname>
     <middlename>testMiddleName 1</middlename>
     <lastname>testLastName 1</lastname>
+    <nikcname>333</nikcname>
+    <homePhone>testPhone</homePhone>
   </contact>
 </list>
