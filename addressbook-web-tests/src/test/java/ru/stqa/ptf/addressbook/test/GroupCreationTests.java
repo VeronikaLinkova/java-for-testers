@@ -51,66 +51,29 @@ public class GroupCreationTests extends TestBase {
   public void testGroupCreation(GroupData group) throws Exception {
 
     app.goTo().GroupsPage();
-    //Set<GroupData> before = app.group().all();
-    Groups before = app.group().all();
-
-    List<GroupData> beforeList = app.group().list();
-    //GroupData group = new GroupData().withName("test1");
-    //int before = app.getGroupHelper().getGroupsCount();
+    Groups before = app.db().groups();
 
     app.group().create(group);
-    //первоначальный вариант создания группы
-    //app.getGroupHelper().initGroupCreation();
-    //app.getGroupHelper().fillGroupForm(group);
-    //app.getGroupHelper().submitGroupCreation();
     app.goTo().GroupsPage();
-    //Set<GroupData> after = app.group().all();
-    Groups after = app.group().all();
-    //List<GroupData> after = app.group().list();
-
-    //int after = app.getGroupHelper().getGroupsCount();
-    //app.logOut();
-    //Assert.assertEquals(after,before + 1);
-    //Assert.assertEquals(after.size(),before.size() + 1);
+    Groups after = app.db().groups();
     assertThat(after.size(), equalTo(before.size() + 1));
-    //after.
-    /*
-    int max = 0;
-    for (GroupData g: after){
-      if (g.getId()>max){
-        max = g.getId();
-      }
-    }
-     */
 
-    //int max = after.stream().max((o1, o2) -> Integer.compare(o1.getId(),o2.getId())).get().getId();
-    //before.add(group.withId(after.stream().mapToInt((g)-> g.getId()).max().getAsInt()));
-
-    //group.setId(max);
-    //закомментирую компоратор, т.к. он относится к сортировке для списков,а мы перешли на множества
-    /*
-    Comparator<? super GroupData> byId = (g1, g2) ->Integer.compare(g1.getId(),g2.getId());
-    before.sort(byId);
-    after.sort(byId);
-     */
-    //Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
-    //Assert.assertEquals(before,after);
+    before = before.withAdded(group.withId(after.stream().mapToInt((g)-> g.getId()).max().getAsInt()));
     assertThat(after,
-            equalTo(before.withAdded(group.withId(after.stream().mapToInt((g)-> g.getId()).max().getAsInt()))));
+            equalTo(before));
   }
-  @Test
+  @Test (enabled = true)
   public void testBadGroupCreation() throws Exception {
 
     app.goTo().GroupsPage();
-    Groups before = app.group().all();
+    Groups before = app.db().groups();
 
-    List<GroupData> beforeList = app.group().list();
     GroupData group = new GroupData().withName("test1'");
 
     app.group().create(group);
     app.goTo().GroupsPage();
     assertThat( app.group().count(), equalTo(before.size()));
-    Groups after = app.group().all();
+    Groups after = app.db().groups();
     assertThat(after, equalTo(before));
   }
 }

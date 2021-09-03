@@ -24,33 +24,17 @@ public class GroupModificationTests extends TestBase{
     @Test
     public void testGroupModification(){
 
-        //int before = app.getGroupHelper().getGroupsCount();
         app.goTo().GroupsPage();
-        //Groups before = app.group().all();
         Groups before = app.db().groups();
-        //Set<GroupData> before = app.group().all();
-        //List<GroupData> before = app.group().list();
         GroupData modifiedGroup = before.iterator().next();
-        //int index = before.size()-1;
         GroupData group = new GroupData().
                 withId(modifiedGroup.getId()).withName("test4").withHeader("tests2").withFooter("test6");
 
         app.group().modify(group);
         app.goTo().GroupsPage();
-        //int after = app.getGroupHelper().getGroupsCount();
         Assert.assertEquals(app.group().count(),before.size());
-        //Groups after = app.group().all();
         Groups after = app.db().groups();
-        //Set<GroupData> after = app.group().all();
-        //List<GroupData> after = app.group().list();
-        //Assert.assertEquals(after,before);
-        //before.remove(modifiedGroup);
-        //before.add(group);
-        //Assert.assertEquals(new HashSet<>(before), new HashSet<>(after));
-        //Comparator<? super GroupData> byId = (g1,g2) ->Integer.compare(g1.getId(),g2.getId());
-        //before.sort(byId);
-        //after.sort(byId);
-        //Assert.assertEquals(before, after);
+
         MatcherAssert.assertThat
                 (before.without(modifiedGroup).withAdded(group), CoreMatchers.equalTo(after));
     }
