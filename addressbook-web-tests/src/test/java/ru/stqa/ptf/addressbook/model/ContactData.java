@@ -129,6 +129,7 @@ public class ContactData {
         this.allEmailAdress = allEmailAdress;
         return this;
     }
+
     public ContactData withPhoto(File photo) {
         this.photo = photo.getPath();
         return this;
@@ -162,6 +163,20 @@ public class ContactData {
     public String getWorkPhone() {
         return workPhone;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ContactData that = (ContactData) o;
+        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(middlename, that.middlename) && Objects.equals(lastname, that.lastname) && Objects.equals(nikcname, that.nikcname) && Objects.equals(homePhone, that.homePhone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstname, middlename, lastname, nikcname, homePhone);
+    }
+
     public File getPhoto() {
         return new File(photo);
     }
@@ -181,15 +196,4 @@ public class ContactData {
         return allPhones;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ContactData that = (ContactData) o;
-        return id == that.id && Objects.equals(firstname, that.firstname) && Objects.equals(lastname, that.lastname);
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstname, lastname, id);
-    }
 }

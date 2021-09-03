@@ -36,10 +36,10 @@ public class ContactCreationTests extends TestBase {
   @Test(dataProvider = "validContacts")
   public void testContactCreation(ContactData contact) throws Exception {
 
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
 
     app.goTo().goToAddNewContactPage();
-    File photo = new File("src/test/resources/photo.png");
+    //File photo = new File("src/test/resources/photo.png");
     //ContactData contact = new ContactData().withFirstname("Ekaterina1").withLastname("111").withNikcname("222")
     //        .withPhoto(photo);
 
@@ -47,7 +47,7 @@ public class ContactCreationTests extends TestBase {
     app.goTo().homePage();
 
     Assert.assertEquals(before.size(),app.contact().count()-1);
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
 
     int max = after.stream().mapToInt((c)->c.getId()).max().getAsInt();
     assertThat(after, CoreMatchers.equalTo(
