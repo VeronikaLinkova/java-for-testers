@@ -37,5 +37,6 @@ public class GroupModificationTests extends TestBase{
 
         MatcherAssert.assertThat
                 (before.without(modifiedGroup).withAdded(group), CoreMatchers.equalTo(after));
+        verifyGroupListInUi();
     }
 }

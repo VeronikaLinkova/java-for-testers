@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.ptf.addressbook.test.ContactModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-03T19:29:19" hostname="DESKTOP-9PR791T" time="4.759">
-  <properties/>
-  <testcase name="testContactModification" classname="ru.stqa.ptf.addressbook.test.ContactModificationTests" time="4.759"/>
-  <system-out><![CDATA[Hibernate: select c1_0.id, c1_0.address, c1_0.email, c1_0.email2, c1_0.email3, c1_0.firstname, c1_0.home, c1_0.lastname, c1_0.middlename, c1_0.mobile, c1_0.nickname, c1_0.photo, c1_0.work from addressbook as c1_0
-Hibernate: select c1_0.id, c1_0.address, c1_0.email, c1_0.email2, c1_0.email3, c1_0.firstname, c1_0.home, c1_0.lastname, c1_0.middlename, c1_0.mobile, c1_0.nickname, c1_0.photo, c1_0.work from addressbook as c1_0
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

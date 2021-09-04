@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.ptf.addressbook.test.HbConnectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-04T15:16:47" hostname="DESKTOP-9PR791T" time="0.712">
+  <properties/>
+  <testcase name="testHbConnection" classname="ru.stqa.ptf.addressbook.test.HbConnectionTest" time="0.712"/>
+  <system-out><![CDATA[Hibernate: select c1_0.id, c1_0.address, c1_0.email, c1_0.email2, c1_0.email3, c1_0.firstname, c1_0.home, c1_0.lastname, c1_0.middlename, c1_0.mobile, c1_0.nickname, c1_0.photo, c1_0.work from addressbook as c1_0
+Hibernate: select g1_0.id, g1_1.group_id, g1_1.group_footer, g1_1.group_header, g1_1.group_name from address_in_groups as g1_0 inner join group_list as g1_1 on g1_0.group_id = g1_1.group_id where g1_0.id = ?
+Hibernate: select g1_0.id, g1_1.group_id, g1_1.group_footer, g1_1.group_header, g1_1.group_name from address_in_groups as g1_0 inner join group_list as g1_1 on g1_0.group_id = g1_1.group_id where g1_0.id = ?
+Hibernate: select g1_0.id, g1_1.group_id, g1_1.group_footer, g1_1.group_header, g1_1.group_name from address_in_groups as g1_0 inner join group_list as g1_1 on g1_0.group_id = g1_1.group_id where g1_0.id = ?
+ContactData{id=107, firstname='test 666', middlename='testMiddleName 0', lastname='testLastName 0'}
+[GroupData{id=55, name='666'}]
+ContactData{id=108, firstname='Veronika1990Last', middlename='Test3', lastname='Ivanova11'}
+[]
+ContactData{id=109, firstname='Veronika', middlename='Al', lastname='Linkova'}
+[GroupData{id=54, name='test4'}, GroupData{id=55, name='666'}]
+]]></system-out>
+  <system-err><![CDATA[сент. 04, 2021 6:16:43 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.0.0.Alpha9
+сент. 04, 2021 6:16:45 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: Loaded JDBC driver class: com.mysql.jdbc.Driver
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001012: Connecting with JDBC URL [jdbc:mysql://localhost:3306/addressbook]
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, useUnicode=true, CharSet=utf8, characterEncoding=utf8, user=root}
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH10001115: Connection pool size: 1 (min=1)
+сент. 04, 2021 6:16:45 PM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl logSelectedDialect
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+]]></system-err>
+</testsuite>
