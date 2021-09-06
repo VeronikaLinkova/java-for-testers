@@ -9,10 +9,12 @@ dependencies {
     implementation 'org.hamcrest:java-hamcrest:2.0.0.0'
     implementation 'org.hibernate:hibernate-core:6.0.0.Alpha9'
     implementation 'com.thegoate:testng:0.15.8.202107032201'
+    implementation 'com.google.http-client:google-http-client:1.39.2-sp.1'
 }
 
 test{
     useTestNG()
+    /*
     options.suites("src/test/resources/testng.xml")
     if (project.hasProperty('browser')){
         systemProperty 'browser', "${browser}"
@@ -23,5 +25,7 @@ test{
     if (project.hasProperty('verifyUI')){
         systemProperty 'verifyUI', "${verifyUI}"
     }
+
+     */
 }
 

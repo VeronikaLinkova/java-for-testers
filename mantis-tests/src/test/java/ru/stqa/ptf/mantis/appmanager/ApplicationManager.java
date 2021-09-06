@@ -44,7 +44,7 @@ public class ApplicationManager {
 
         wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         wd.manage().window().maximize();
-        wd.get(properties.getProperty("web.baseUrl"));
+        //wd.get(properties.getProperty("web.baseUrl"));
     }
 
     public void logOut() {
@@ -55,13 +55,11 @@ public class ApplicationManager {
         wd.quit();
     }
 
-    public boolean isElementPresent(By by) {
-      try {
-          wd.findElement(by);
-        return true;
-      } catch (NoSuchElementException e) {
-        return false;
-      }
+    public HttpSession newSession(){
+        return new HttpSession(this);
     }
 
+    public String getProperty(String key) {
+        return properties.getProperty("web.baseURL");
+    }
 }
